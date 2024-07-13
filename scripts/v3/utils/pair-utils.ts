@@ -3,12 +3,12 @@ import {
   FeeAmount, MintOptions,
   NonfungiblePositionManager,
   Pool,
-  Position,
-  TICK_SPACINGS
+  Position, Route,
+  TICK_SPACINGS, Trade
 } from "@uniswap/v3-sdk";
 import {calcSqrtPriceX96, price2Tick} from "./math-utils";
-import {chainId, getContract, mainWallet, makeContract, saveContract} from "../../../utils/contract";
-import {Percent, Token} from "@uniswap/sdk-core";
+import {chainId, getContract, mainWallet, makeContract, saveContract, sendTx} from "../../../utils/contract";
+import {CurrencyAmount, Percent, Token, TradeType} from "@uniswap/sdk-core";
 import {BigNumber, ethers} from "ethers";
 import {approve, fetchToken} from "./token-utils";
 
@@ -171,6 +171,11 @@ export async function addLiquidity(
   console.log(`Transaction hash: ${tx.hash}`)
 }
 
+export async function removeLiquidity(
+) {
+
+}
+
 export async function getAmountOut(
   tokenInAddress: string,
   tokenOutAddress: string,
@@ -226,7 +231,73 @@ export async function getPoolInfo(
 }
 
 export async function swap(
-
+  tokenInAddress: string,
+  tokenOutAddress: string,
+  fee: FeeAmount,
+  amountIn: BigNumber,
+  amountOutMin = BigNumber.from(0),
 ) {
+  const {
+    token: tokenInContract, symbol: symbolIn, decimals: decimalsIn
+  } = await fetchToken(tokenInAddress)
+  const {
+    symbol: symbolOut, decimals: decimalsOut
+  } = await fetchToken(tokenOutAddress)
 
+  const factory = await getContract('UniswapV3Factory')
+
+  const tokenIn = new Token(chainId(), tokenInAddress, decimalsIn)
+  const tokenOut = new Token(chainId(), tokenOutAddress, decimalsOut)
+
+  const wallet = mainWallet()
+
+  const tokenA = tokenIn < tokenOut ? tokenIn : tokenOut
+  const tokenB = tokenIn < tokenOut ? tokenOut : tokenIn
+
+  const currentPoolAddress = computePoolAddress({
+    factoryAddress: factory.address, tokenA, tokenB, fee,
+  })
+
+  const poolContract = await saveContract('UniswapV3Pool', currentPoolAddress, `${symbolIn}-${symbolOut}`)
+
+  const [liquidity, slot0] = await Promise.all([
+    poolContract.liquidity(),
+    poolContract.slot0(),
+  ])
+
+  const pool = new Pool(
+    tokenA, tokenB, fee, slot0.sqrtPriceX96.toString(),
+    liquidity.toString(), slot0.tick
+  )
+  console.log(`Pool ${symbolIn}-${symbolOut} liquidity: ${ethers.utils.formatUnits(liquidity)}`, slot0)
+
+  const swapRoute = new Route([pool], tokenIn, tokenOut)
+  const amountOut = await getAmountOut(
+    tokenInAddress, tokenOutAddress, amountIn, fee
+  )
+
+  console.log(`Amount in: ${ethers.utils.formatUnits(amountIn, decimalsIn)} ${symbolIn}`)
+  console.log(`Amount out: ${ethers.utils.formatUnits(amountOut, decimalsOut)} ${symbolOut}`)
+  console.log(`Price: ${ethers.utils.formatUnits(amountOut, decimalsOut)} ${symbolOut} / ${ethers.utils.formatUnits(amountIn, decimalsIn)} ${symbolIn} = ${
+    ethers.utils.formatUnits(amountOut.mul(ethers.constants.WeiPerEther).div(amountIn), 18)} ${symbolOut}/${symbolIn} = ${
+    ethers.utils.formatUnits(amountIn.mul(ethers.constants.WeiPerEther).div(amountOut), 18)} ${symbolIn}/${symbolOut}`)
+
+  const swapRouter = await getContract('SwapRouter02')
+
+  await approve(tokenInContract, swapRouter.address, amountIn)
+
+  const swapParams = {
+    tokenIn: tokenInAddress,
+    tokenOut: tokenOutAddress, fee,
+    deadline: Math.floor(Date.now() / 1000) + 60 * 20, // 20 minutes from the current Unix time
+    recipient: wallet.address,
+    amountIn: amountIn.toString(),
+    amountOutMinimum: amountOutMin.toString(),
+    sqrtPriceLimitX96: 0,
+  };
+  const tx = await sendTx(swapRouter.exactInputSingle(swapParams, {
+    gasLimit: 3000000,
+  }), `Swapping ${symbolIn} for ${symbolOut}`)
+
+  console.log(`Swapped ${symbolIn} for ${symbolOut}`)
 }
