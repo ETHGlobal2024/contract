@@ -1,6 +1,6 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import dotenv from "dotenv"
-import {getContract, mainWallet, makeContract, sendTx, setupHRE} from "../../utils/contract";
+import {getContract, mainWallet, makeContract, sendTx, setupHRE} from "../../../utils/contract";
 import hre, {ethers} from "hardhat";
 import {initializePool} from "../utils/router";
 

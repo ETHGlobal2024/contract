@@ -1,5 +1,5 @@
 import {BigNumber, Contract, ethers} from 'ethers';
-import {getContract, mainWallet, sendTx} from "../../utils/contract";
+import {getContract, mainWallet, sendTx} from "../../../utils/contract";
 import {parseUnits} from "ethers/lib/utils";
 
 export const ZeroAddress = "0x0000000000000000000000000000000000000000"

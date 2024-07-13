@@ -3,18 +3,20 @@
   "scripts": {
     "compile": "npx hardhat compile",
     "test": "npx hardhat test",
-    "foundry-test": "forge test --contracts ./tests/foundry/ -vvvv",
+    "foundry-test": "forge test --contracts temp/foundry/ -vvvvv",
     "flat-factory": "npx hardhat flatten contracts/uniswap-v2-core/UniswapV2Factory.sol > temp/flattened/UniswapV2Factory.sol",
     "flat-router": "npx hardhat flatten contracts/uniswap-v2-periphery/UniswapV2Router02.sol > temp/flattened/UniswapV2Router02.sol",
-    "deploy-uniswap-v4": "npx hardhat run scripts/deploy-uniswap-v4.ts --no-compile",
-    "deploy-mock-tokens": "npx hardhat run scripts/deploy-mock-tokens.ts --no-compile",
-
-    "pool-init": "npx hardhat run scripts/pool/init.ts --no-compile",
-    "pool-add": "npx hardhat run scripts/pool/add.ts --no-compile",
-    "pool-add-with-hook": "npx hardhat run scripts/pool/addWithHook.ts --no-compile",
-
+    "deploy-uniswap-v4": "npx hardhat run scripts/v4/deploy-uniswap-v4.ts --no-compile",
+    "deploy-mock-tokens": "npx hardhat run scripts/v4/deploy-mock-tokens.ts --no-compile",
+    "deploy-and-test": "npx hardhat run scripts/v4/deploy-and-test.ts",
+    "pool-init": "npx hardhat run scripts/v4/pool/init.ts --no-compile",
+    "pool-add": "npx hardhat run scripts/v4/pool/add.ts --no-compile",
+    "pool-add-with-hook": "npx hardhat run scripts/v4/pool/add-with-hook.ts --no-compile",
     "weth-wrap": "npx hardhat run scripts/wrap-weth.ts --no-compile",
-    "weth-withdraw": "npx hardhat run scripts/wrap-withdraw.ts --no-compile"
+    "weth-withdraw": "npx hardhat run scripts/wrap-withdraw.ts --no-compile",
+
+    "add-liquidity": "npx hardhat run scripts/v3/add-liquidity.ts --no-compile",
+    "test2": "npx hardhat run scripts/v3/test.ts --no-compile"
   },
   "devDependencies": {
     "@matterlabs/hardhat-zksync-solc": "^0.3.17",
@@ -60,6 +62,7 @@
     "@pythnetwork/pyth-sdk-solidity": "^2.2.1",
     "@uniswap/lib": "^4.0.1-alpha",
     "@uniswap/sdk-core": "^5.3.1",
+    "@uniswap/v3-periphery": "^1.4.4",
     "@uniswap/v3-sdk": "^3.13.1",
     "bitcoinjs-lib": "^6.1.5",
     "dotenv": "^16.3.1",
@@ -67,6 +70,7 @@
     "ethereum-waffle": "^4.0.10",
     "express": "^4.18.2",
     "js-sha3": "^0.9.3",
+    "jsbi": "^3.1.4",
     "morgan": "^1.10.0",
     "mysql2": "^3.9.7",
     "redis": "^4.6.11",

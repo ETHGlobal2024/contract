@@ -61,9 +61,20 @@ const config: HardhatUserConfig = {
   solidity: {
     compilers: [
       {
-        version: "0.8.24",
+        version: "0.7.6",
         settings: {
-          evmVersion: "pairs",
+          evmVersion: "shanghai",
+          optimizer: {
+            enabled: true,
+            runs: 100
+          },
+          viaIR: true
+        }
+      },
+      {
+        version: "0.8.20",
+        settings: {
+          evmVersion: "shanghai",
           optimizer: {
             enabled: true,
             runs: 100
@@ -79,7 +90,7 @@ const config: HardhatUserConfig = {
     hardhat: {
       mining: {
         auto: true,
-        interval: 500
+        interval: 200
       }
     },
     dev: {

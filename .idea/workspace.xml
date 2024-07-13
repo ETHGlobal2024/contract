@@ -2,58 +2,116 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6075f4ba-390f-4416-8176-d442f3cc3449" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/ERC6909.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/ERC6909Claims.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/Extsload.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/Exttload.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/NoDelegateCall.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/PoolManager.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/ProtocolFees.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/interfaces/IExtsload.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/interfaces/IExttload.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/interfaces/IHooks.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/interfaces/IPoolManager.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/interfaces/IProtocolFeeController.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/interfaces/IProtocolFees.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/interfaces/callback/IUnlockCallback.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/interfaces/external/IERC20Minimal.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/interfaces/external/IERC6909Claims.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/BitMath.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/CurrencyDelta.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/CustomRevert.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/FixedPoint128.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/FixedPoint96.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/FullMath.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/Hooks.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/LPFeeLibrary.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/LiquidityMath.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/Lock.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/NonZeroDeltaCount.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/ParseBytes.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/Pool.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/Position.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/ProtocolFeeLibrary.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/Reserves.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/SafeCast.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/SqrtPriceMath.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/StateLibrary.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/SwapMath.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/TickBitmap.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/TickMath.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/TransientStateLibrary.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/UnsafeMath.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/types/BalanceDelta.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/types/BeforeSwapDelta.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/types/Currency.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/types/PoolId.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/types/PoolKey.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/types/Slot0.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/AIRangeHook.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/LiquidityCalculator.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/MockERC20.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/MockERC20.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/PoolBase.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/PoolModifyLiquidity.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/PoolReader.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/PoolSwap.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/lib/solmate/auth/Auth.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/lib/solmate/auth/Owned.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/lib/solmate/auth/authorities/MultiRolesAuthority.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/lib/solmate/auth/authorities/RolesAuthority.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/lib/solmate/mixins/ERC4626.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/lib/solmate/tokens/ERC1155.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/lib/solmate/tokens/ERC20.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/lib/solmate/tokens/ERC721.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/lib/solmate/tokens/WETH.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/lib/solmate/utils/Bytes32AddressLib.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/lib/solmate/utils/CREATE3.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/lib/solmate/utils/FixedPointMathLib.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/lib/solmate/utils/LibString.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/lib/solmate/utils/MerkleProofLib.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/lib/solmate/utils/ReentrancyGuard.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/lib/solmate/utils/SSTORE2.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/lib/solmate/utils/SafeCastLib.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/lib/solmate/utils/SafeTransferLib.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/lib/solmate/utils/SignedWadMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/ERC6909.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/ERC6909Claims.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/Extsload.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/Exttload.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/NoDelegateCall.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/PoolManager.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/ProtocolFees.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/interfaces/IExtsload.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/interfaces/IExttload.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/interfaces/IHooks.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/interfaces/IPoolManager.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/interfaces/IProtocolFeeController.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/interfaces/IProtocolFees.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/interfaces/callback/IUnlockCallback.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/interfaces/external/IERC20Minimal.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/interfaces/external/IERC6909Claims.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/BitMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/CurrencyDelta.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/CustomRevert.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/FixedPoint128.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/FixedPoint96.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/FullMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/Hooks.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/LPFeeLibrary.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/LiquidityMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/Lock.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/NonZeroDeltaCount.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/ParseBytes.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/Pool.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/Position.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/ProtocolFeeLibrary.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/Reserves.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/SafeCast.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/SqrtPriceMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/StateLibrary.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/SwapMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/TickBitmap.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/TickMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/TransientStateLibrary.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/libraries/UnsafeMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/types/BalanceDelta.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/types/BeforeSwapDelta.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/types/Currency.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/types/PoolId.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/types/PoolKey.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/types/Slot0.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-core/utils/CurrencySettler.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/BaseHook.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/base/ImmutableState.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/base/Multicall.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/base/PeripheryPayments.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/base/PeripheryValidation.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/base/SafeCallback.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/base/SelfPermit.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/interfaces/IMulticall.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/interfaces/IPeripheryPayments.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/interfaces/IQuoter.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/interfaces/ISelfPermit.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/interfaces/ITWAMM.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/interfaces/external/IERC1271.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/interfaces/external/IERC20PermitAllowed.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/lens/Quoter.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/libraries/LiquidityAmounts.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/libraries/Oracle.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/libraries/PathKey.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/libraries/PoolGetters.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/libraries/PoolTicksCounter.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/libraries/TWAMM/ABDKMathQuad.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/libraries/TWAMM/OrderPool.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/libraries/TWAMM/TwammMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/libraries/TransferHelper.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4-periphery/libraries/UniswapV4ERC20.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foundry.toml" beforeDir="false" afterPath="$PROJECT_DIR$/foundry.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hardhat.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/hardhat.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/deploy-uniswap-v4.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy-uniswap-v4.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/deploy-mock-tokens.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/v4/deploy-mock-tokens.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/deploy-uniswap-v4.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/v4/deploy-uniswap-v4.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/pool/add.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/v4/pool/add.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/pool/addWithHook.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/v4/pool/add-with-hook.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/pool/init.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/v4/pool/init.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/utils/info.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/v4/utils/info.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/utils/math.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/v4/utils/math.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/utils/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/v4/utils/router.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +139,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/node_modules/@uniswap/v3-sdk/dist/constants.d.ts" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/node_modules/@uniswap/v3-sdk/dist/entities/pool.d.ts" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/node_modules/@uniswap/v3-sdk/dist/utils/computePoolAddress.d.ts" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/node_modules/hardhat/src/internal/core/providers/http.ts" root0="SKIP_INSPECTION" />
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="wh1bnt30" />
@@ -97,29 +159,33 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/scripts/pool" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/unused-contracts" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="ts.external.directory.path" value="E:\Exermon\Saanhoi\zircuit\eth-global\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\scripts\pool" />
-      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\contracts" />
-      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\contracts\uniswap-v4-core\libraries" />
-      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\contracts\uniswap-v4-core" />
-      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\scripts\operation" />
+      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\unused-contracts" />
+      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\scripts\v3" />
+      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\artifacts\contracts\v3-core" />
+      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\artifacts\contracts\v3-periphery" />
+      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\artifacts\contracts\v3-periphery\NonfungibleTokenPositionDescriptor.sol" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\contracts" />
-      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\contracts\uniswap-v4-periphery" />
-      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\contracts\uniswap-v4" />
-      <recent name="E:\Exermon\Saanhoi\zircuit\circuit-swap-contract\temp" />
-      <recent name="E:\Exermon\Saanhoi\zircuit\circuit-swap-contract\scripts\circuitswap\v1.5" />
+      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\unused-contracts" />
+      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\artifacts\contracts\v3-periphery" />
+      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\artifacts\contracts\v3-core" />
+      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\contracts\v3-core" />
+      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\scripts\v4" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\scripts\v3\utils\token-utils.ts" />
+      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\scripts\v3\utils\math-utils.ts" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.compile">
+  <component name="RunManager" selected="npm.add-liquidity">
     <configuration name="app.ts" type="NodeJSConfigurationType" node-parameters="--require ts-node/register " path-to-js-file="backend/app.ts" working-dir="$PROJECT_DIR$/">
       <method v="2" />
     </configuration>
@@ -135,11 +201,31 @@
       <option name="programParameters" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="add-liquidity" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="add-liquidity" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="compile" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="compile" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="deploy-and-test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy-and-test" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -185,11 +271,11 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="pool-init" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="test2" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="pool-init" />
+        <script value="test2" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -212,15 +298,19 @@
       <item itemvalue="npm.foundry-test" />
       <item itemvalue="npm.weth-wrap" />
       <item itemvalue="npm.deploy-mock-tokens" />
-      <item itemvalue="npm.pool-init" />
       <item itemvalue="npm.pool-add" />
+      <item itemvalue="npm.deploy-and-test" />
       <item itemvalue="TypeScript.app.ts" />
+      <item itemvalue="npm.add-liquidity" />
+      <item itemvalue="npm.test2" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.pool-init" />
-        <item itemvalue="npm.pool-add" />
+        <item itemvalue="npm.add-liquidity" />
+        <item itemvalue="npm.test2" />
         <item itemvalue="npm.deploy-mock-tokens" />
+        <item itemvalue="npm.deploy-and-test" />
+        <item itemvalue="npm.pool-add" />
       </list>
     </recent_temporary>
   </component>
@@ -282,7 +372,8 @@
       <workItem from="1720249336048" duration="336000" />
       <workItem from="1720365331936" duration="1623000" />
       <workItem from="1720791636245" duration="39828000" />
-      <workItem from="1720857705915" duration="3914000" />
+      <workItem from="1720857705915" duration="21123000" />
+      <workItem from="1720881399019" duration="15091000" />
     </task>
     <servers />
   </component>
@@ -323,6 +414,30 @@
           <url>file://$PROJECT_DIR$/scripts/circuitswap/v1.5/utils/info.ts</url>
           <line>44</line>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>mock://file:///E:/Exermon/Saanhoi/zircuit/eth-global/node_modules/@uniswap/v3-sdk/src/entities/position.ts</url>
+          <line>162</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>mock://file:///E:/Exermon/Saanhoi/zircuit/eth-global/node_modules/@uniswap/v3-sdk/src/entities/position.ts</url>
+          <line>169</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>mock://file:///E:/Exermon/Saanhoi/zircuit/eth-global/node_modules/@uniswap/v3-sdk/src/entities/position.ts</url>
+          <line>161</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/@uniswap/sdk-core/dist/sdk-core.cjs.development.js</url>
+          <line>946</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="68" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

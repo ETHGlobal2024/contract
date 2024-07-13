@@ -107,6 +107,16 @@ interface IPoolManager is IProtocolFees, IERC6909Claims, IExtsload, IExttload {
     /// @return The data returned by the call to `IUnlockCallback(msg.sender).unlockCallback(data)`
     function unlock(bytes calldata data) external returns (bytes memory);
 
+    /// @notice Contains data about pool lockers.
+    struct LockData {
+        /// @notice The current number of active lockers
+        uint128 length;
+        /// @notice The total number of nonzero deltas over all active + completed lockers
+        uint128 nonzeroDeltaCount;
+    }
+    /// @notice Returns lock data
+    function lockData() external view returns (uint128 length, uint128 nonzeroDeltaCount);
+
     struct ModifyLiquidityParams {
         // the lower and upper tick of the position
         int24 tickLower;

@@ -1,6 +1,6 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import dotenv from "dotenv"
-import {mainWallet, makeContract, sendTx, setupHRE} from "../utils/contract";
+import {mainWallet, makeContract, sendTx, setupHRE} from "../../utils/contract";
 import hre, {ethers} from "hardhat";
 
 dotenv.config();

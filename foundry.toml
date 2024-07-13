@@ -3,6 +3,8 @@ src = 'contracts'
 out = "out"
 libs = ["lib"]
 tests = 'tests/foundry'
+solc = "0.8.26"
+evm_version = "cancun"
 
 via_ir = true
 

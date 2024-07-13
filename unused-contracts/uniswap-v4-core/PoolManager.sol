@@ -25,6 +25,7 @@ import {Reserves} from "./libraries/Reserves.sol";
 import {Extsload} from "./Extsload.sol";
 import {Exttload} from "./Exttload.sol";
 import {CustomRevert} from "./libraries/CustomRevert.sol";
+import {LockDataLibrary} from './libraries/LockDataLibrary.sol';
 
 //  4
 //   44
@@ -87,6 +88,14 @@ contract PoolManager is IPoolManager, ProtocolFees, NoDelegateCall, ERC6909Claim
     using Reserves for Currency;
     using CustomRevert for bytes4;
 
+    using LockDataLibrary for IPoolManager.LockData;
+    /// @inheritdoc IPoolManager
+    IPoolManager.LockData public override lockData;
+
+    mapping(address locker => mapping(Currency currency => int256 currencyDelta)) public currencyDelta;
+
+    bool public isLocked = true;
+
     /// @inheritdoc IPoolManager
     int24 public constant MAX_TICK_SPACING = TickMath.MAX_TICK_SPACING;
 
@@ -99,21 +108,22 @@ contract PoolManager is IPoolManager, ProtocolFees, NoDelegateCall, ERC6909Claim
 
     /// @notice This will revert if the contract is locked
     modifier onlyWhenUnlocked() {
-        if (!Lock.isUnlocked()) ManagerLocked.selector.revertWith();
+        if (isLocked) ManagerLocked.selector.revertWith();
         _;
     }
 
     /// @inheritdoc IPoolManager
     function unlock(bytes calldata data) external override returns (bytes memory result) {
-        if (Lock.isUnlocked()) AlreadyUnlocked.selector.revertWith();
+        if (!isLocked) AlreadyUnlocked.selector.revertWith();
 
-        Lock.unlock();
+        isLocked = false;
 
         // the caller does everything in this callback, including paying what they owe via calls to settle
         result = IUnlockCallback(msg.sender).unlockCallback(data);
 
-        if (NonZeroDeltaCount.read() != 0) CurrencyNotSettled.selector.revertWith();
-        Lock.lock();
+        if (lockData.nonzeroDeltaCount != 0) CurrencyNotSettled.selector.revertWith();
+//        if (NonZeroDeltaCount.read() != 0) CurrencyNotSettled.selector.revertWith();
+        isLocked = true;
     }
 
     /// @inheritdoc IPoolManager
@@ -319,21 +329,38 @@ contract PoolManager is IPoolManager, ProtocolFees, NoDelegateCall, ERC6909Claim
         _pools[id].setLPFee(newDynamicLPFee);
     }
 
-    /// @notice Adds a balance delta in a currency for a target address
     function _accountDelta(Currency currency, int128 delta, address target) internal {
         if (delta == 0) return;
 
-        int256 current = currency.getDelta(target);
+//        address locker = lockData.getActiveLock();
+        int256 current = currencyDelta[target][currency];
         int256 next = current + delta;
 
-        if (next == 0) {
-            NonZeroDeltaCount.decrement();
-        } else if (current == 0) {
-            NonZeroDeltaCount.increment();
+        unchecked {
+            if (next == 0) {
+                lockData.nonzeroDeltaCount--;
+            } else if (current == 0) {
+                lockData.nonzeroDeltaCount++;
+            }
         }
 
-        currency.setDelta(target, next);
+        currencyDelta[target][currency] = next;
     }
+//    /// @notice Adds a balance delta in a currency for a target address
+//    function _accountDelta(Currency currency, int128 delta, address target) internal {
+//        if (delta == 0) return;
+//
+//        int256 current = currency.getDelta(target);
+//        int256 next = current + delta;
+//
+//        if (next == 0) {
+//            NonZeroDeltaCount.decrement();
+//        } else if (current == 0) {
+//            NonZeroDeltaCount.increment();
+//        }
+//
+//        currency.setDelta(target, next);
+//    }
 
     /// @notice Accounts the deltas of 2 currencies to a target address
     function _accountPoolBalanceDelta(PoolKey memory key, BalanceDelta delta, address target) internal {

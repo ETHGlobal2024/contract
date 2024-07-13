@@ -1,6 +1,6 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import dotenv from "dotenv"
-import {getContract, mainWallet, makeContract, sendTx, setupHRE} from "../../utils/contract";
+import {getContract, mainWallet, makeContract, sendTx, setupHRE} from "../../../utils/contract";
 import hre, {ethers} from "hardhat";
 import {addLiquidity, initializePool} from "../utils/router";
 import {getPairInfoWithOwner} from "../utils/info";
@@ -13,7 +13,7 @@ export async function main(hre: HardhatRuntimeEnvironment) {
   const address = mainWallet().address;
 
   const tokenA = await getContract("MockERC20", "EETH");
-  const tokenB = await getContract("MockERC20", "USDC");
+  const tokenB = await getContract("MockERC20", "USDe");
 
   // const priceUpper = 5500;
   // const priceLower = 4500;

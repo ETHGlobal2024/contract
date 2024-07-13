@@ -1,5 +1,5 @@
 import {BigNumber, Contract, ethers} from 'ethers';
-import {getContract, hre, mainWallet, saveContract, sendTx} from "../../utils/contract";
+import {getContract, hre, mainWallet, saveContract, sendTx} from "../../../utils/contract";
 import {fetchToken, getPoolId, getPoolKey, ZeroAddress} from "./router";
 
 const MIN_TICK = -887272;
