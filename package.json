@@ -16,6 +16,8 @@
     "weth-withdraw": "npx hardhat run scripts/wrap-withdraw.ts --no-compile",
 
     "add-liquidity": "npx hardhat run scripts/v3/add-liquidity.ts --no-compile",
+    "remove-liquidity": "npx hardhat run scripts/v3/remove-liquidity.ts --no-compile",
+    "swap": "npx hardhat run scripts/v3/swap.ts --no-compile",
     "test2": "npx hardhat run scripts/v3/test.ts --no-compile"
   },
   "devDependencies": {

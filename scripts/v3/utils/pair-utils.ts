@@ -62,7 +62,7 @@ export async function addLiquidity(
   if (tokenAAddress > tokenBAddress)
     return addLiquidity(tokenBAddress, tokenAAddress,
       1 / priceUpper, 1 / priceLower, fee,
-      1 / initialPrice, deltaAmountA, deltaAmountB, deltaLiquidity)
+      1 / initialPrice, deltaAmountB, deltaAmountA, deltaLiquidity)
 
   const {
     token: tokenAContract, symbol: symbolA, decimals: decimalsA
@@ -92,7 +92,7 @@ export async function addLiquidity(
     console.log(`Pool found with liquidity ${ethers.utils.formatUnits(liquidity)} and slot0:`, slot0)
 
     configuredPool = new Pool(
-      tokenA, tokenB, fee, slot0.sqrtPriceX96?.toString(),
+      tokenA, tokenB, fee, slot0.sqrtPriceX96.toString(),
       liquidity.toString(), slot0.tick
     )
   } catch (e) {
@@ -146,7 +146,11 @@ export async function addLiquidity(
     throw new Error('Invalid parameters')
   }
 
-  console.log(`Approving tokens: ${realDeltaAmountA} ${symbolA} and ${realDeltaAmountB} ${symbolB}`)
+  console.log(`Approving tokens: ${
+    ethers.utils.formatUnits(realDeltaAmountA, decimalsA)
+  } ${symbolA} and ${
+    ethers.utils.formatUnits(realDeltaAmountB, decimalsB)
+  } ${symbolB}`)
 
   await approve(tokenAContract, positionManager.address, realDeltaAmountA)
   await approve(tokenBContract, positionManager.address, realDeltaAmountB)
@@ -165,4 +169,64 @@ export async function addLiquidity(
   await tx.wait()
 
   console.log(`Transaction hash: ${tx.hash}`)
+}
+
+export async function getAmountOut(
+  tokenInAddress: string,
+  tokenOutAddress: string,
+  amountIn: BigNumber,
+  fee: FeeAmount,
+) {
+  const {symbol: symbolIn} = await fetchToken(tokenInAddress)
+  const {symbol: symbolOut} = await fetchToken(tokenOutAddress)
+
+  const quoter = await getContract('QuoterV2')
+  const outData = await quoter.callStatic.quoteExactInputSingle({
+    tokenIn: tokenInAddress, tokenOut: tokenOutAddress, fee, amountIn: amountIn.toString(), sqrtPriceLimitX96: 0
+  })
+  console.log(`Price for ${ethers.utils.formatUnits(amountIn)} ${symbolIn} is ${ethers.utils.formatUnits(outData.amountOut)} ${symbolOut}`, outData)
+
+  return outData.amountOut
+}
+
+export async function getPoolInfo(
+  tokenAAddress: string,
+  tokenBAddress: string,
+  fee: FeeAmount,
+) {
+  if (tokenAAddress > tokenBAddress)
+    return getPoolInfo(tokenBAddress, tokenAAddress, fee)
+
+  const { symbol: symbolA, decimals: decimalsA } = await fetchToken(tokenAAddress)
+  const { symbol: symbolB, decimals: decimalsB } = await fetchToken(tokenBAddress)
+
+  const factory = await getContract('UniswapV3Factory')
+
+  const tokenA = new Token(chainId(), tokenAAddress, decimalsA)
+  const tokenB = new Token(chainId(), tokenBAddress, decimalsB)
+
+  const currentPoolAddress = computePoolAddress({
+    factoryAddress: factory.address, tokenA, tokenB, fee,
+  })
+
+  const poolContract = await saveContract('UniswapV3Pool', currentPoolAddress, `${symbolA}-${symbolB}`)
+
+  const [liquidity, slot0] =
+    await Promise.all([
+      poolContract.liquidity(),
+      poolContract.slot0(),
+    ])
+
+  console.log(`Pool ${symbolA}-${symbolB} with fee ${fee} and liquidity ${liquidity} and slot0:`, slot0)
+  return {
+    liquidity,
+    sqrtPriceX96: slot0[0],
+    tick: slot0[1]
+  }
+}
+
+export async function swap(
+
+) {
+
 }
