@@ -1,7 +1,7 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import dotenv from "dotenv"
 import {mainWallet, makeContract, sendTx, setupHRE} from "../utils/contract";
-import hre from "hardhat";
+import hre, {ethers} from "hardhat";
 
 dotenv.config();
 
@@ -10,12 +10,15 @@ export async function deploy(hre: HardhatRuntimeEnvironment) {
 
   const address = mainWallet().address;
 
-  const [weth] = await makeContract("WETH9");
-  const [usdt] = await makeContract("ERC20", "USDT", ["USDT", "USDT", "100000000000000000000000"]);
-
-  // 设置controllerGasLimit参数，例如500000
-  const controllerGasLimit = 500000;
+  const controllerGasLimit = 9999999999;
   const [pm] = await makeContract("PoolManager", [controllerGasLimit]);
+  const [pr] = await makeContract("PoolReader", [pm.address]);
+  // const [lc] = await makeContract("LiquidityCalculator");
+
+  const [pml] = await makeContract("PoolModifyLiquidity", [pm.address]);
+  const [ps] = await makeContract("PoolSwap", [pm.address]);
+
+  // const [hook] = await makeContract("AIRangeHook", [pm.address]);
 }
 
 deploy(hre).catch((error) => {

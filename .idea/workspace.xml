@@ -1,7 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6075f4ba-390f-4416-8176-d442f3cc3449" name="Changes" comment="" />
+    <list default="true" id="6075f4ba-390f-4416-8176-d442f3cc3449" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/ERC6909.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/ERC6909Claims.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/Extsload.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/Exttload.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/NoDelegateCall.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/PoolManager.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/ProtocolFees.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/interfaces/IExtsload.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/interfaces/IExttload.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/interfaces/IHooks.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/interfaces/IPoolManager.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/interfaces/IProtocolFeeController.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/interfaces/IProtocolFees.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/interfaces/callback/IUnlockCallback.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/interfaces/external/IERC20Minimal.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/interfaces/external/IERC6909Claims.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/BitMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/CurrencyDelta.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/CustomRevert.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/FixedPoint128.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/FixedPoint96.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/FullMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/Hooks.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/LPFeeLibrary.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/LiquidityMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/Lock.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/NonZeroDeltaCount.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/ParseBytes.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/Pool.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/Position.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/ProtocolFeeLibrary.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/Reserves.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/SafeCast.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/SqrtPriceMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/StateLibrary.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/SwapMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/TickBitmap.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/TickMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/TransientStateLibrary.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/libraries/UnsafeMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/types/BalanceDelta.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/types/BeforeSwapDelta.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/types/Currency.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/types/PoolId.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/types/PoolKey.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/uniswap-v4/types/Slot0.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardhat.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/hardhat.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/deploy-uniswap-v4.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy-uniswap-v4.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +97,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/contracts/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/scripts/pool" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
     <property name="ts.external.directory.path" value="E:\Exermon\Saanhoi\zircuit\eth-global\node_modules\typescript\lib" />
@@ -52,17 +105,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\contracts\lib" />
+      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\scripts\pool" />
       <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\contracts" />
-      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global" />
-      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\env" />
-      <recent name="E:\Exermon\Saanhoi\zircuit\circuit-swap-contract\scripts\circuitswap\v1.5\pair" />
+      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\contracts\uniswap-v4-core\libraries" />
+      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\contracts\uniswap-v4-core" />
+      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\scripts\operation" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\contracts" />
+      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\contracts\uniswap-v4-periphery" />
+      <recent name="E:\Exermon\Saanhoi\zircuit\eth-global\contracts\uniswap-v4" />
       <recent name="E:\Exermon\Saanhoi\zircuit\circuit-swap-contract\temp" />
       <recent name="E:\Exermon\Saanhoi\zircuit\circuit-swap-contract\scripts\circuitswap\v1.5" />
-      <recent name="E:\Exermon\Saanhoi\zircuit\circuit-swap-contract\backend\uitls" />
-      <recent name="E:\Exermon\Saanhoi\zircuit\circuit-swap-contract\utils" />
     </key>
   </component>
   <component name="RunManager" selected="npm.compile">
@@ -81,16 +135,6 @@
       <option name="programParameters" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="circuitswap-deploy" type="js.build_tools.npm" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="circuitswap-deploy" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="compile" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -101,31 +145,21 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="deploy-test-pairs" type="js.build_tools.npm" nameIsGenerated="true">
+    <configuration name="deploy-mock-tokens" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="deploy-test-pairs" />
+        <script value="deploy-mock-tokens" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="deploy-test-tokens" type="js.build_tools.npm" nameIsGenerated="true">
+    <configuration name="deploy-uniswap-v4" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="deploy-test-tokens" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="faucet" type="js.build_tools.npm" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="faucet" />
+        <script value="deploy-uniswap-v4" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -141,61 +175,21 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="pair-add" type="js.build_tools.npm" nameIsGenerated="true">
+    <configuration name="pool-add" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="pair-add" />
+        <script value="pool-add" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="pair-info" type="js.build_tools.npm" nameIsGenerated="true">
+    <configuration name="pool-init" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="pair-info" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="pair-remove" type="js.build_tools.npm" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="pair-remove" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="pair-set-fee" type="js.build_tools.npm" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="pair-set-fee" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="pair-swap" type="js.build_tools.npm" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="pair-swap" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="pair-sync" type="js.build_tools.npm" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="pair-sync" />
+        <script value="pool-init" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -214,20 +208,21 @@
     <list>
       <item itemvalue="Node.js.app.ts" />
       <item itemvalue="npm.compile" />
+      <item itemvalue="npm.deploy-uniswap-v4" />
       <item itemvalue="npm.foundry-test" />
-      <item itemvalue="npm.deploy-test-tokens" />
-      <item itemvalue="npm.circuitswap-deploy" />
-      <item itemvalue="npm.deploy-test-pairs" />
       <item itemvalue="npm.weth-wrap" />
-      <item itemvalue="npm.pair-info" />
-      <item itemvalue="npm.pair-add" />
-      <item itemvalue="npm.pair-remove" />
-      <item itemvalue="npm.pair-swap" />
-      <item itemvalue="npm.pair-sync" />
-      <item itemvalue="npm.pair-set-fee" />
-      <item itemvalue="npm.faucet" />
+      <item itemvalue="npm.deploy-mock-tokens" />
+      <item itemvalue="npm.pool-init" />
+      <item itemvalue="npm.pool-add" />
       <item itemvalue="TypeScript.app.ts" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.pool-init" />
+        <item itemvalue="npm.pool-add" />
+        <item itemvalue="npm.deploy-mock-tokens" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -286,7 +281,8 @@
       <workItem from="1720146952729" duration="1218000" />
       <workItem from="1720249336048" duration="336000" />
       <workItem from="1720365331936" duration="1623000" />
-      <workItem from="1720791636245" duration="8263000" />
+      <workItem from="1720791636245" duration="39828000" />
+      <workItem from="1720857705915" duration="3914000" />
     </task>
     <servers />
   </component>

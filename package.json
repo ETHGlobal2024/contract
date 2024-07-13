@@ -6,7 +6,15 @@
     "foundry-test": "forge test --contracts ./tests/foundry/ -vvvv",
     "flat-factory": "npx hardhat flatten contracts/uniswap-v2-core/UniswapV2Factory.sol > temp/flattened/UniswapV2Factory.sol",
     "flat-router": "npx hardhat flatten contracts/uniswap-v2-periphery/UniswapV2Router02.sol > temp/flattened/UniswapV2Router02.sol",
-    "weth-wrap": "npx hardhat run scripts/weth/wrap.ts --no-compile"
+    "deploy-uniswap-v4": "npx hardhat run scripts/deploy-uniswap-v4.ts --no-compile",
+    "deploy-mock-tokens": "npx hardhat run scripts/deploy-mock-tokens.ts --no-compile",
+
+    "pool-init": "npx hardhat run scripts/pool/init.ts --no-compile",
+    "pool-add": "npx hardhat run scripts/pool/add.ts --no-compile",
+    "pool-add-with-hook": "npx hardhat run scripts/pool/addWithHook.ts --no-compile",
+
+    "weth-wrap": "npx hardhat run scripts/wrap-weth.ts --no-compile",
+    "weth-withdraw": "npx hardhat run scripts/wrap-withdraw.ts --no-compile"
   },
   "devDependencies": {
     "@matterlabs/hardhat-zksync-solc": "^0.3.17",
@@ -51,6 +59,8 @@
     "@pythnetwork/pyth-evm-js": "^1.17.0",
     "@pythnetwork/pyth-sdk-solidity": "^2.2.1",
     "@uniswap/lib": "^4.0.1-alpha",
+    "@uniswap/sdk-core": "^5.3.1",
+    "@uniswap/v3-sdk": "^3.13.1",
     "bitcoinjs-lib": "^6.1.5",
     "dotenv": "^16.3.1",
     "ecpair": "^2.1.0",
